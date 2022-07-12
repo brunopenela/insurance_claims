@@ -267,8 +267,15 @@ view: claims_stream {
     sql: ${TABLE}.witnesses ;;
   }
 
+  dimension: net_value {
+    type: number
+    sql: ${TABLE}.capital_gains - ${TABLE}.capital_loss  ;;
+  }
+
   measure: count {
     type: count
     drill_fields: []
   }
+
+
 }
