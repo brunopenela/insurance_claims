@@ -269,7 +269,7 @@ view: claims_stream {
 
   dimension: net_value {
     type: number
-    sql: ${TABLE}.capital_gains - ${TABLE}.capital_loss  ;;
+    sql: ${TABLE}.capital_gains + ${TABLE}.capital_loss  ;;
   }
 
   measure: count {
